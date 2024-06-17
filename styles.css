@@ -310,6 +310,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .sidebar {
     position: fixed;
     left: 0;
@@ -328,23 +333,19 @@ body {
 .sidebar-button {
     width: 40px;
     height: 40px;
+    background-color: #555;
     color: white;
     border: none;
     margin: 5px 0;
     cursor: pointer;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #333;
 }
 
 .sidebar-button:hover {
     background-color: #777;
-}
-
-.content {
-    padding: 20px;
-    margin-left: 70px;
 }
 

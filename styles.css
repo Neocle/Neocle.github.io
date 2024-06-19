@@ -454,6 +454,8 @@ body.dark-mode .sidebar-button:hover {
 #bottom-button {
     position: relative;
     bottom: 10px;
+    left:50%;
+    margin-left:-25%;
     transform: translateX(-50%);
     padding: 10px 20px;
     font-size: 16px;

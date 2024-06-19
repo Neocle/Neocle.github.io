@@ -451,7 +451,7 @@ body.dark-mode .sidebar-button:hover {
     background-color: #555;
 }
 
-#other-things {
+#bottom-button {
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -459,14 +459,15 @@ body.dark-mode .sidebar-button:hover {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #007bff;
-    border: none;
+    background-color: transparent;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#other-things:hover {
-    background-color: #0056b3;
+#bottom-button:hover {
+    background-color: white;
+    color: black;
 }

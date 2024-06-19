@@ -20,8 +20,13 @@
 </head>
 <body>
     <div class="sidebar">
-        <button class="sidebar-button"><i class="fas fa-solid fa-moon"></i></button>
-        <button class="sidebar-button"><i class="fas fa-cog"></i></button>
+        <button class="sidebar-button" id="darkModeToggle"><i class="fas fa-solid fa-moon"></i></button>
+        <button class="sidebar-button" id="languageButton"><i class="fas fa-cog"></i></button>
+        <div class="language-menu" id="languageMenu">
+            <a href="#" data-lang="en">English</a>
+            <a href="#" data-lang="fr">Français</a>
+            <a href="#" data-lang="es">Español</a>
+        </div>
     </div>
     <div class="background"></div>
     <div class="content">
@@ -68,13 +73,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.content').classList.add('loaded');
         });
-        
+
         document.addEventListener('DOMContentLoaded', function() {
             const copyIPButton = document.getElementById('copyIPButton');
 
             copyIPButton.addEventListener('click', function(event) {
                 event.preventDefault();
-        
+
                 const ipAddress = copyIPButton.getAttribute('data-ip');
 
                 const textarea = document.createElement('textarea');
@@ -92,6 +97,46 @@
             });
         });
 
+        // Dark mode toggle
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const background = document.querySelector('.background');
+            if (document.body.classList.contains('dark-mode')) {
+                background.style.backgroundImage = "url('uploads/white_background.webp')";
+            } else {
+                background.style.backgroundImage = "url('uploads/background.webp')";
+            }
+        });
+
+        // Language menu toggle
+        const languageButton = document.getElementById('languageButton');
+        const languageMenu = document.getElementById('languageMenu');
+
+        languageButton.addEventListener('mouseover', function() {
+            languageMenu.style.display = 'block';
+        });
+
+        languageButton.addEventListener('mouseout', function() {
+            languageMenu.style.display = 'none';
+        });
+
+        languageMenu.addEventListener('mouseover', function() {
+            languageMenu.style.display = 'block';
+        });
+
+        languageMenu.addEventListener('mouseout', function() {
+            languageMenu.style.display = 'none';
+        });
+
+        // Language selection
+        const languageLinks = document.querySelectorAll('.language-menu a');
+        languageLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                alert('Language changed to: ' + link.getAttribute('data-lang'));
+                languageMenu.style.display = 'none';
+            });
+        });
     </script>
 </body>
 </html>

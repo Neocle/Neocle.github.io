@@ -18,6 +18,10 @@ html {
     overflow-y: hidden;
 }
 
+a {
+    color: black;
+}
+
 .background {
     background: url('uploads/background.webp') no-repeat center center fixed;
     background-size: cover;
@@ -53,8 +57,8 @@ html {
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: auto;
     border-radius: 50%;
     margin-right: 20px;
     animation: fadeInUp 1s ease-in-out;
@@ -303,19 +307,93 @@ html {
 
 body {
     display: flex;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+.sidebar-button {
+    width: 40px;
+    height: 40px;
+    color: black;
+    background-color: #fff;
+    border: none;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.sidebar-button:hover {
+    transform: scale(1.20);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .background {
+    background-image: url('uploads/white_background.webp');
+}
+
+body.dark-mode .content {
+    color: black;
+}
+
+body.dark-mode .project {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+body.dark-mode .social-title, 
+body.dark-mode #projects-title {
+    color: black;
+}
+
+body.dark-mode .project-description h3, 
+body.dark-mode .project-description p{
+    color: white;
+}
+
+body.dark-mode .social-button a {
+    font-size: 1.5em;
+    color: black;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+body.dark-mode .social-button a:hover {
+    color: #121212;
+}
+
+body.dark-mode .social-button:hover {
+    transform: scale(1.2);
+}
+
+body.dark-mode a {
+    color: white;
+}
+
+body.dark-mode .sidebar {
     position: fixed;
     left: 0;
     top: 50%;
@@ -330,11 +408,11 @@ body {
     border-radius: 0 5px 5px 0;
 }
 
-.sidebar-button {
+body.dark-mode .sidebar-button {
     width: 40px;
     height: 40px;
-    background-color: #555;
     color: white;
+    background-color: #333;
     border: none;
     margin: 5px 0;
     cursor: pointer;
@@ -345,7 +423,30 @@ body {
     border-radius: 50%;
 }
 
-.sidebar-button:hover {
-    background-color: #777;
+body.dark-mode .sidebar-button:hover {
+    transform: scale(1.20);
 }
 
+/* Language menu styles */
+.language-menu {
+    display: none;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.language-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.language-menu a:hover {
+    background-color: #555;
+}

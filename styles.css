@@ -452,6 +452,7 @@ body.dark-mode .sidebar-button:hover {
 }
 
 #bottom-button {
+    text-decoration: none;
     position: relative;
     bottom: 10px;
     left:50%;

@@ -457,12 +457,9 @@ body.dark-mode .sidebar-button:hover {
 }
 
 .bottom-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     text-align: center;
-    width: 100%;
+    margin-top: 20px;
 }
 
 .bottom-button .button {
@@ -473,10 +470,10 @@ body.dark-mode .sidebar-button:hover {
     border: 2px solid white;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
 }
 
 .bottom-button .button:hover {
-    background-color: white;
-    color: #007bff; 
+    background-color: rgba(255, 255, 255, 0.1);
 }
 

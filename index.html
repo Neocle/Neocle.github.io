@@ -1,95 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="icon" href="https://neocle.me/uploads/favicon.png">
-    <title>Neocle</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preload" href="uploads/background.webp" as="image">
-    
-    <meta property="description" content="Hi there! I'm a French student learning Web & Java development. I love discovering new technologies and always look for ways to improve my skills.">
-    <meta name="theme-color" content="#ffffff">
-
-    <meta property="og:title" content="Neocle's Profile">
-    <meta property="og:description" content="Hi there! I'm a French student learning Web & Java development. I love discovering new technologies and always look for ways to improve my skills.">
-    <meta property="og:image" content="https://www.neocle.me/uploads/profile-picture.png">
-    <meta property="og:url" content="https://www.neocle.me/">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neocle</title>
+  <link rel="icon" href="https://neocle.me/uploads/favicon.png" />
+  <meta name="description" content="Future game and software developer." />
+  <meta name="theme-color" content="#f0f4ff" />
+  <meta property="og:title" content="Neocle's Profile" />
+  <meta property="og:description" content="Future game and software developer." />
+  <meta property="og:image" content="https://www.neocle.me/uploads/profile-picture.png" />
+  <meta property="og:url" content="https://www.neocle.me/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="background"></div>
-    <div class="content">
-        <div class="profile-header">
-            <img src="uploads/profile-picture.png" alt="Profile Picture" class="profile-picture">
-            <h1 class="name">Neocle</h1>
+    <div class="wrapper">
+      <main class="container">
+        <section class="header">
+          <img src="uploads/profile-picture.png" alt="Profile Picture" class="avatar" />
+          <h1 class="main-title">Neocle</h1>
+          <p class="subtitle" id="typing"></p>
+        </section>
+  
+        <div class="navbar">
+          <a href="#about"><i class="navbar-icons fa-solid fa-address-card"></i>About</a>
+          <a href="#projects"><i class="navbar-icons fa-solid fa-diagram-project"></i>Projects</a>
+          <a href="#contact"><i class="navbar-icons fa-solid fa-message"></i>Contact</a>
+          <a href="#"><i class="navbar-icons fa-solid fa-question"></i>Soon...</a>
         </div>
-        <p class="bio">Hi there! I'm a French student learning Web & Java development. I love discovering new technologies and always look for ways to improve my skills. I'm passionate about video games and am involved in some Minecraft server projects.</p>
-        <h2 class="social-title">My Socials</h2>
-        <div id="social-buttons">
-            <div class="social-button" style="--order: 1;"><a href="https://discordapp.com/users/515958203838627856/"><i class="fab fa-discord"></i></a></div>
-            <div class="social-button" style="--order: 2;"><a href="https://www.youtube.com/channel/UCuJroY6sbleZrTz7N0xyWbA"><i class="fab fa-youtube"></i></a></div>
-            <div class="social-button" style="--order: 3;"><a href="https://www.tiktok.com/@neocle_"><i class="fab fa-tiktok"></i></a></div>
-            <div class="social-button" style="--order: 4;"><a href="https://www.instagram.com/neocle_/"><i class="fab fa-instagram"></i></a></div>
-            <div class="social-button" style="--order: 5;"><a href="https://github.com/Neocle"><i class="fab fa-github"></i></a></div>
-        </div>
-        <div id="projects-section" class="projects-section">
-            <h2 id="projects-title">My Projects</h2>
-            <div class="project" style="--order: 1;">
-                <img src="uploads/project1.png" alt="Project 1" class="project-image">
-                    <div class="project-description">
-                    <h3>Admin @ AloraMC</h3>
-                    <p>AloraMC is a Minecraft server that will be making its Grand Return within the coming months, and we would love to see you there!</a></p>
-                    <div class="project-buttons">
-                        <a href="https://www.aloramc.com" class="button blue-button">Website</a>
-                        <a href="#" class="button blue-button" id="copyIPButton" data-ip="play.aloramc.com">Copy the IP</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project" style="--order: 2;">
-                <img src="uploads/project2.png" alt="Project 2" class="project-image">
-                <div class="project-description">
-                    <h3>Dev of PAPI-Social-Expansion</h3>
-                    <p>An addon for <a href="https://www.spigotmc.org/resources/placeholderapi.6245/">PlaceholderAPI</a> which adds a bunch of placeholders based on Twitch & Youtube APIs. More placeholders coming soon...</p>
-                    <div class="project-buttons">
-                        <a href="https://github.com/Neocle/PlaceholderAPI-SocialExpansion/releases/download/1.0.0/ExpansionSocial-1.0.0.jar" class="button gradient-button light-blue-purple">Download</a>
-                        <a href="https://github.com/Neocle/PlaceholderAPI-SocialExpansion" class="button gradient-button light-blue-purple">Documentation</a>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-button">
-                <a href="https://neocle.site/calendar" class="button outline-button">A Cool Calendar</a>
-            </div>
-        </div>
+  
+        <section class="socials">
+          <a href="https://discordapp.com/users/515958203838627856/" class="icon"><i class="fab fa-discord"></i></a>
+          <a href="https://www.youtube.com/channel/UCuJroY6sbleZrTz7N0xyWbA" class="icon"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@neocle_" class="icon"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/neocle_/" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Neocle" class="icon"><i class="fab fa-github"></i></a>
+        </section>
+      </main>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.content').classList.add('loaded');
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const copyIPButton = document.getElementById('copyIPButton');
-
-            copyIPButton.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                const ipAddress = copyIPButton.getAttribute('data-ip');
-
-                const textarea = document.createElement('textarea');
-                textarea.value = ipAddress;
-                textarea.setAttribute('readonly', '');
-                textarea.style.position = 'absolute';
-                textarea.style.left = '-9999px';
-
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-
-                alert('IP Address copied to clipboard: ' + ipAddress);
-            });
-        });
-    </script>
-</body>
+  
+    <footer class="footer">
+      <p>&copy; 2025 Neocle. All rights reserved.</p>
+    </footer>
+  </body>  
+  <script src="script.js"></script>
 </html>

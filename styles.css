@@ -22,8 +22,15 @@
     align-items: center;
   }
   
+  .header {
+    min-width: 100%;
+  }
+
   .container {
     text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
   }
   
   .avatar {
@@ -43,13 +50,28 @@
     margin-bottom: 0.5rem;
   }
   
+  .description {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+
   .subtitle {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 2rem;
+    min-height: 2.2rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    word-wrap: break-word;
+    position: relative;
   }
   
   .navbar {
+    min-width: 600px;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -59,7 +81,9 @@
     padding: 0.75rem 1.5rem;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
   }
+  
   
   .navbar a {
     color: white;
@@ -68,8 +92,12 @@
     padding: 0.5rem 1rem;
     border-radius: 12px;
     transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
   }
-  
+
   .navbar a:hover {
     background: var(--accent);
     color: white;
@@ -110,11 +138,7 @@
     align-items: center;
     padding: 2rem;
   }
-
-  .navbar-icons {
-    margin-right: 10px;
-  }
-
+  
   .cursor {
     display: inline-block;
     animation: blink 1s steps(1) infinite;
@@ -126,3 +150,54 @@
       opacity: 0;
     }
   }
+
+  @media (max-width: 600px) {
+    .main-title {
+      font-size: 2.2rem;
+    }
+  
+    .description {
+      max-width: 250px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      white-space: normal;
+    }
+  
+    .avatar {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      min-width: 350px;
+    }
+
+    .navbar a {
+      width: 100%;
+      text-align: left;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  
+    .socials {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .icon {
+      font-size: 1.5rem;
+    }
+  
+    .wrapper {
+      padding: 1rem;
+    }
+  }
+  

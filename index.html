@@ -15,11 +15,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="loading-animation.js"></script>
 </head>
 <body>
     <div class="wrapper">
       <main class="container">
-        <section class="header">
+        <section class="header animate-on-load">
           <img src="uploads/profile-picture.png" alt="Profile Picture" class="avatar" />
           <h1 class="main-title">Neocle</h1>
           <div class="description">
@@ -27,15 +28,15 @@
           </div>
         </section>
   
-        <div class="navbar">
-          <a href="#about"><i class="navbar-icons fa-solid fa-house"></i>Home</a>
-          <a href="#about"><i class="navbar-icons fa-solid fa-address-card"></i>About</a>
-          <a href="#projects"><i class="navbar-icons fa-solid fa-diagram-project"></i>Projects</a>
-          <a href="#contact"><i class="navbar-icons fa-solid fa-message"></i>Contact</a>
+        <div class="navbar animate-on-load">
+          <a href="/"><i class="navbar-icons fa-solid fa-house"></i>Home</a>
+          <a href="/about"><i class="navbar-icons fa-solid fa-address-card"></i>About</a>
+          <a href="/projects"><i class="navbar-icons fa-solid fa-diagram-project"></i>Projects</a>
+          <a href="/contact"><i class="navbar-icons fa-solid fa-message"></i>Contact</a>
           <a href="#"><i class="navbar-icons fa-solid fa-question"></i>Soon...</a>
         </div>
   
-        <section class="socials">
+        <section class="socials animate-on-load">
           <a href="https://discordapp.com/users/515958203838627856/" class="icon"><i class="fab fa-discord"></i></a>
           <a href="https://www.youtube.com/channel/UCuJroY6sbleZrTz7N0xyWbA" class="icon"><i class="fab fa-youtube"></i></a>
           <a href="https://www.tiktok.com/@neocle_" class="icon"><i class="fab fa-tiktok"></i></a>
@@ -45,9 +46,10 @@
       </main>
     </div>
   
-    <footer class="footer">
+    <footer class="footer animate-on-load">
       <p>&copy; 2025 Neocle. All rights reserved.</p>
     </footer>
   </body>  
-  <script src="script.js"></script>
+  <script src="navbar-highlight.js"></script>
+  <script src="animated-subtitle.js"></script>
 </html>

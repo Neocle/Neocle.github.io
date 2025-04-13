@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neocle - Contact</title>
+  <link rel="icon" href="https://neocle.me/uploads/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/loading-animation.js"></script>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 0.6s ease both;
+    }
+
+    input, textarea {
+      font-family: var(--font);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--end);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-block {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1rem 1.5rem;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease, transform 0.2s ease;
+        font-size: 1.2rem;
+    }
+
+    .contact-block:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .contact-block i {
+        font-size: 1.6rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="container">
+      <section class="header">
+        <h1 class="main-title">Get In Touch</h1>
+        <p class="subtitle">Let's connect or collaborate on something cool!</p>
+      </section>
+
+      <div class="navbar">
+        <a href="/"><i class="fa-solid fa-house navbar-icons"></i>Home</a>
+        <a href="/about"><i class="fa-solid fa-address-card navbar-icons"></i>About</a>
+        <a href="/projects"><i class="fa-solid fa-diagram-project navbar-icons"></i>Projects</a>
+        <a href="/contact.html"><i class="fa-solid fa-message navbar-icons"></i>Contact</a>
+        <a href="/"><i class="fa-solid fa-question navbar-icons"></i>Soon...</a>
+      </div>
+
+      <div class="contact-info">
+        <p>You can reach me directly via this form or through socials below.</p>
+      </div>
+
+      <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-blocks" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+        <a href="https://discordapp.com/users/515958203838627856/" target="_blank" class="contact-block">
+          <i class="fab fa-discord"></i>
+          <span>@neocle</span>
+        </a>
+        <a href="https://www.instagram.com/neocle_/" target="_blank" class="contact-block">
+          <i class="fab fa-instagram"></i>
+          <span>@neocle_</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Neocle. All rights reserved.</p>
+  </footer>
+
+  <script src="js/navbar-highlight.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neocle - Projects</title>
+  <link rel="icon" href="https://neocle.me/uploads/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/loading-animation.js"></script>
+  <style>
+    .projects-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease both;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .project-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(131, 193, 223, 0.2);
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="container">
+      <section class="header">
+        <h1 class="main-title">My Projects</h1>
+        <p class="subtitle">A showcase of things I've built or contributed to.</p>
+      </section>
+
+      <div class="navbar">
+        <a href="/"><i class="fa-solid fa-house navbar-icons"></i>Home</a>
+        <a href="/about"><i class="fa-solid fa-address-card navbar-icons"></i>About</a>
+        <a href="/projects.html"><i class="fa-solid fa-diagram-project navbar-icons"></i>Projects</a>
+        <a href="/contact"><i class="fa-solid fa-message navbar-icons"></i>Contact</a>
+        <a href="/"><i class="fa-solid fa-question navbar-icons"></i>Soon...</a>
+      </div>
+
+      <section class="projects-section">
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="Project One" class="project-img">
+            <div class="project-info">
+              <h2 class="project-title">Project One</h2>
+              <p class="project-desc">A cool project I made using HTML, CSS, and JavaScript. It does amazing things!</p>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="images/project2.jpg" alt="Project Two" class="project-img">
+            <div class="project-info">
+              <h2 class="project-title">Project Two</h2>
+              <p class="project-desc">This one is a game prototype using Unity. It's still in progress but looks promising.</p>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="images/project3.jpg" alt="Open Source" class="project-img">
+            <div class="project-info">
+              <h2 class="project-title">Open Source Contribution</h2>
+              <p class="project-desc">I contributed to an open-source tool on GitHub, fixing bugs and improving performance.</p>
+            </div>
+          </div>          
+      </section>
+
+      <section class="socials">
+        <a href="https://discordapp.com/users/515958203838627856/" class="icon"><i class="fab fa-discord"></i></a>
+        <a href="https://www.youtube.com/channel/UCuJroY6sbleZrTz7N0xyWbA" class="icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@neocle_" class="icon"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/neocle_/" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Neocle" class="icon"><i class="fab fa-github"></i></a>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Neocle. All rights reserved.</p>
+  </footer>
+  <script src="js/navbar-highlight.js"></script>
+</body>
+</html>

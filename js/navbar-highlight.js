@@ -1,7 +1,8 @@
-const currentPath = window.location.pathname;
+const currentPath = window.location.pathname.replace(/\/$/, '');
 
 document.querySelectorAll('.navbar a').forEach(link => {
-  if (link.getAttribute('href') === currentPath) {
+  const href = link.getAttribute('href').replace(/\/$/, '');
+  if (href && currentPath.endsWith(href)) {
     link.classList.add('active');
   }
 });

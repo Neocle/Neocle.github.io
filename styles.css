@@ -53,7 +53,7 @@
   .description {
     width: 100%;
     align-self: center;
-    justify-self: center;
+
   }
 
   .subtitle {
@@ -66,7 +66,6 @@
     text-align: center;
     overflow: hidden;
     word-wrap: break-word;
-    position: relative;
   }
   
   .navbar {

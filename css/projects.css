@@ -74,5 +74,9 @@ html, body {
       width: 100%;
       height: auto;
     }
+
+    .main-title {
+      margin-top: 5rem;
+    }
   }
   

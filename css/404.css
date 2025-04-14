@@ -1,0 +1,44 @@
+.not-found {
+    text-align: center;
+    padding: 4rem 2rem;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .not-found h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .not-found p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .not-found a {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .not-found a:hover {
+    background: var(--end);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

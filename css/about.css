@@ -1,3 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 160vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #0c0c0c;
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: hidden;
+}
+
 .about-section {
     max-width: 700px;
     margin: 0 auto;

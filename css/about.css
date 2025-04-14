@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .about-section {
     max-width: 700px;
     margin: 0 auto;
@@ -45,6 +52,9 @@
   @media (max-width: 600px) {
     .about-section {
       padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
     .about-section h2 {
@@ -58,7 +68,7 @@
     .about-section img {
       width: 150px;
       height: 150px;
-      margin-top: clamp(1rem, 5vw, 5rem);
+      margin-top: 50vh;
     }
   
     .navbar a {
@@ -73,4 +83,5 @@
       align-items: center;
     }
   }
+  
   

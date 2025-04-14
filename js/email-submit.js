@@ -1,6 +1,12 @@
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
   
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      showStatusMessage("Please verify that you're not a robot.", "error");
+      return;
+    }  
+
     const now = Date.now();
     const lastSent = localStorage.getItem('lastEmailSent');
     const THIRTY_MIN = 30 * 60 * 1000;
